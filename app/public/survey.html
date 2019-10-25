@@ -1,0 +1,246 @@
+<!--THIS IS SIMPLY THE SURVEY PAGE. ADMITTEDLY MY LACK OF SKILL WITH FORMS REALLY CAUSED SOME PAIN HERE.-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey Page!</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <h1>This is the SURVEY page!</h1>
+
+    <form>
+
+
+        <!--Standard bootstrap entry forms-->
+        <div id="nameEntry" class="form-group">
+            <label for="exampleFormControlInput1">Name:</label>
+            <input type="email" class="form-control" id="selectorName" placeholder="John Smith">
+        </div>
+
+        <div id="photoURLentry" class="form-group">
+            <label for="exampleFormControlInput1">URL for Photo:</label>
+            <input type="url" class="form-control" id="selectorPhoto"
+                placeholder="https://www.photobucket.com/yourawesomephoto">
+        </div>
+
+        <br>
+
+
+
+        <!--Drop downs for answering the questions?-->
+        <h4>Question 1</h4>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Example select</label>
+            <select class="form-control" id="selector1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <br>
+
+        <h4>Question 2</h4>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Example select</label>
+            <select class="form-control" id="selector2">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <br>
+
+        <h4>Question 3</h4>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Example select</label>
+            <select class="form-control" id="selector3">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <br>
+
+        <h4>Question 4</h4>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Example select</label>
+            <select class="form-control" id="selector4">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <br>
+
+        <h4>Question 5</h4>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Example select</label>
+            <select class="form-control" id="selector5">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <br>
+
+        <h4>Question 6</h4>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Example select</label>
+            <select class="form-control" id="selector6">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <br>
+
+        <h4>Question 7</h4>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Example select</label>
+            <select class="form-control" id="selector7">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <br>
+
+        <h4>Question 8</h4>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Example select</label>
+            <select class="form-control" id="selector8">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <br>
+
+        <h4>Question 9</h4>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Example select</label>
+            <select class="form-control" id="selector9">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <br>
+
+        <h4>Question 10</h4>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Example select</label>
+            <select class="form-control" id="selector10">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <br>
+        <br>
+
+        <button type="button" class="btn btn-success">Submit Choices!</button>
+
+    </form>
+
+
+
+
+</body>
+
+</html>
+
+
+<!--ATTEMPTING TO GET THE DATA PUSHED TO MY SERVER. REALLY GOT STUCK WITH PARSING MULTIPLE FORMS AND AND PUSHING THOSE TO AN ARRAY, AS WELL AS GETTING ANY KIND OF RESPONSE WHATSOEVER IN THE CONSOLE UPON CLICK.-->
+<!--I get that we're supposed to use routes to reference other files on our server and update those with small functions in the necessary places, but I have
+no idea how to actually make any of this work...-->
+<script type="text/javascript">
+
+    temporaryScoreArray = [];
+
+    
+    $(".submit").on("click", function (event) {
+        event.preventDefault();
+
+
+        temporaryScoreArray.push($("#selector1").val().trim());
+        temporaryScoreArray.push($("#selector2").val().trim());
+        temporaryScoreArray.push($("#selector3").val().trim());
+        temporaryScoreArray.push($("#selector4").val().trim());
+        temporaryScoreArray.push($("#selector5").val().trim());
+        temporaryScoreArray.push($("#selector6").val().trim());
+        temporaryScoreArray.push($("#selector7").val().trim());
+        temporaryScoreArray.push($("#selector8").val().trim());
+        temporaryScoreArray.push($("#selector9").val().trim());
+        temporaryScoreArray.push($("#selector10").val().trim());
+
+        console.log("Temporary Score Array: ", temporaryScoreArray)
+
+        //Trying to get the form data
+        var newFriend = {
+            name: $("#nameEntry").val().trim(),
+            photo: $("#photoURLentry").val().trim(),
+            scores: temporaryScoreArray,
+        };
+
+        //Console log never shows up!
+        console.log(newFriend);
+
+        //Trying to do the AJAX call thing.
+        $.post("./app/routing/apiRoutes", newFriend,
+            function (data) {
+
+                // Clear the form when submitting
+                $("#nameEntry").val("");
+                $("#photoURLentry").val("");
+
+                $("#selector1").val("");
+                $("#selector2").val("");
+                $("#selector3").val("");
+                $("#selector4").val("");
+                $("#selector5").val("");
+                $("#selector6").val("");
+                $("#selector7").val("");
+                $("#selector8").val("");
+                $("#selector9").val("");
+                $("#selector10").val("");
+
+            });
+
+    });
+
+
+</script>
